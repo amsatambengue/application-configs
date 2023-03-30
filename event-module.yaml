@@ -48,7 +48,7 @@ spring
   #   init
   #     mode always
 server
-  port 8082
+  port 8044
   # SSL config (mode https)
     #ssl
     #  key-store classpathcertsWildCard2023.PFX
