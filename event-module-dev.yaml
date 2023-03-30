@@ -1,0 +1,66 @@
+spring
+  cloud
+    compatibility
+      enabled false
+    vault
+      enabled true
+      host localhost
+      port 8098
+      scheme http
+      token myroot
+    kv
+      enabled ture
+  config
+    import optionalvault
+
+  mvc
+    pathmatch
+      matching-strategy ANT_PATH_MATCHER
+  servlet
+    multipart
+      max-file-size 25MB
+      max-request-size 25MB
+  jackson
+    serialization
+      indent-output true
+  datasource
+    type com.zaxxer.hikari.HikariDataSource
+    url jdbcpostgresqllocalhost5432event-module
+    username ${u_pg}
+    password ${p_pg}
+    hikari
+      poolName Hikari
+      auto-commit false
+  jpa
+    database-platform org.hibernate.dialect.PostgreSQLDialect
+    # properties
+    #   hibernate
+    #     default_schema EVENT_DB
+    show-sql true
+    hibernate
+    #   naming
+    #     physical-strategy org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto update
+  profiles
+    active dev
+  # For database initialization
+  # sql
+  #   init
+  #     mode always
+server
+  port 8044
+  # SSL config (mode https)
+    #ssl
+    #  key-store classpathcertsWildCard2023.PFX
+    #  key-store-type PKCS12
+    #  key-store-password 123456789
+  #  key-password 123456789
+
+# Application specific properties.
+# Add your own application properties here, see the ApplicationProperties class
+application
+    name event-module
+
+# Files storage location (stores all file uploaded via REST), see the StorageProperties class
+storage
+  location ${user.home}event-module-uploads
