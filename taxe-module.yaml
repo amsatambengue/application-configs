@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    707driver-class-name: org.postgresql.Driver
+    username: sdt_user
+    url: jdbc:postgresql://154.125.255.110:5435/sdt
+    password: 1707sene
+  jpa:
+    properties:
+      hibernate:
+        default_schema: SDT_DB
+    show-sql: 'true'
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: update
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+  profiles:
+    active: dev
+server:
+  port: 8443
+  # SSL config (mode https)
+    #ssl:
+    # key-store: classpath:certs/WildCard2023.PFX
+    # key-store-type: PKCS12
+    # key-store-password: 123456789
+  # key-password: 123456789
