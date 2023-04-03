@@ -10,6 +10,7 @@ spring:
       port: 8200
       scheme: http
       token: c6fc5310-88f9-4ed2-2393-8eb9a8dfdaed
+      default-context: application
     kv:
       enabled: true
   config:
