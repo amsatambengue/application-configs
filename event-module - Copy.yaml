@@ -1,7 +1,5 @@
 application:
   name: event-module
-
-spring:
   application:
     name: event-module
   mvc:
