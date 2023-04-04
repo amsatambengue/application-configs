@@ -1,5 +1,6 @@
-application:
-  name: event-module
+spring:
+  application:
+    name: event-module
   mvc:
     pathmatch:
       matching-strategy: ANT_PATH_MATCHER
@@ -12,7 +13,7 @@ application:
       indent-output: true
   datasource:
     url: jdbc:postgresql://localhost:5432/event-module
-    username: postgressss
+    username: postgres
     password: admin
     driverClassName: org.postgresql.Driver
     type: com.zaxxer.hikari.HikariDataSource
