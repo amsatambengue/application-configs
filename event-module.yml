@@ -1,20 +1,7 @@
 application:
   name: event-module
-spring:
-  cloud:
-    compatibility:
-      enabled: false
-    vault:
-      enabled: true
-      host: 154.125.255.110
-      port: 8200
-      scheme: http
-      token: c6fc5310-88f9-4ed2-2393-8eb9a8dfdaed
-    kv:
-      enabled: true
-  config:
-    import: optional:vault://
-
+  application:
+    name: event-module
   mvc:
     pathmatch:
       matching-strategy: ANT_PATH_MATCHER
@@ -27,9 +14,6 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/event-module
-    username: postgres
-    password: admin
     hikari:
       poolName: Hikari
       auto-commit: false
@@ -43,8 +27,8 @@ spring:
     #   naming:
     #     physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       ddl-auto: update
-  # profiles:
-  #   active: dev
+  profiles:
+    active: dev
   # For database initialization
   # sql:
   #   init:
@@ -64,3 +48,5 @@ server:
 # Files storage location (stores all file uploaded via REST), see the StorageProperties class
 storage:
   location: ${user.home}/event-module-uploads
+
+  
