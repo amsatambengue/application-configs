@@ -12,7 +12,7 @@ application:
       indent-output: true
   datasource:
     url: jdbc:postgresql://localhost:5432/event-module
-    username: postgres
+    username: postgressss
     password: admin
     driverClassName: org.postgresql.Driver
     type: com.zaxxer.hikari.HikariDataSource
