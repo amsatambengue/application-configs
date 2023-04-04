@@ -37,7 +37,7 @@ application:
   #   init:
   #     mode: always
 server:
-  port: 8099
+  port: 8081
   # SSL config (mode https)
     #ssl:
     #  key-store: classpath:certs/WildCard2023.PFX
