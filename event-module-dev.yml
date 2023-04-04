@@ -1,7 +1,5 @@
 application:
   name: event-module
-  application:
-    name: event-module
   mvc:
     pathmatch:
       matching-strategy: ANT_PATH_MATCHER
@@ -13,43 +11,25 @@ application:
     serialization:
       indent-output: true
   datasource:
-    type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:postgresql://localhost:5432/event-module
     username: ${u_pg}
     password: ${p_pg}
+    driverClassName: org.postgresql.Driver
+    type: com.zaxxer.hikari.HikariDataSource
     hikari:
       poolName: Hikari
       auto-commit: false
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-    # properties:
-    #   hibernate:
-    #     default_schema: EVENT_DB
     show-sql: true
     hibernate:
-    #   naming:
-    #     physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       ddl-auto: update
   profiles:
     active: dev
-  # For database initialization
-  # sql:
-  #   init:
-  #     mode: always
-server:
-  port: 8081
-  # SSL config (mode https)
-    #ssl:
-    #  key-store: classpath:certs/WildCard2023.PFX
-    #  key-store-type: PKCS12
-    #  key-store-password: 123456789
-  #  key-password: 123456789
 
-# Application specific properties.
-# Add your own application properties here, see the ApplicationProperties class
+server:
+  port: 8066
 
 # Files storage location (stores all file uploaded via REST), see the StorageProperties class
 storage:
   location: ${user.home}/event-module-uploads
-
-  
