@@ -64,4 +64,4 @@ server:
 # Files storage location (stores all file uploaded via REST), see the StorageProperties class
 storage:
   location: ${user.home}/event-module-uploads
-  name: event-module
+  # name: event-module
