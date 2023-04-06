@@ -33,7 +33,7 @@ spring:
   #   init:
   #     mode: always
 server:
-  port: 9999
+  port: 8080
   # SSL config (mode https)
     #ssl:
     #  key-store: classpath:certs/WildCard2023.PFX
