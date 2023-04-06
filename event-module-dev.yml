@@ -12,9 +12,9 @@ spring:
     serialization:
       indent-output: true
   datasource:
-    url: jdbc:postgresql://localhost:5432/event-module
+    url: ${datasource_url}
     username: ${u_pg}
-    password: admin
+    password: ${p_pg}
     driverClassName: org.postgresql.Driver
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
